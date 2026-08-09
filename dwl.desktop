@@ -1,5 +1,7 @@
 [Desktop Entry]
+Encoding=UTF-8
 Name=dwl
+DesktopNames=dwl;wlroots
 Comment=dwm for Wayland
-Exec=dwl
+Exec=/home/kuba/dwl/launch.sh
 Type=Application
