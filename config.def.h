@@ -159,16 +159,16 @@ static const Key keys[] = {
 	{ 0,                         XKB_KEY_XF86Search, spawn,              SHCMD("noctalia msg power-cycle") },
 
 	/* screenshots */
-	{ 0,                         XKB_KEY_Print, spawn, SHCMD("f=\"$HOME/Pictures/Screenshots/$(date +%Y%m%d%H%M%S).png\"; grim \"$f\" && notify-send -i \"$f\" \"Screenshot saved\"") },
-	{ WLR_MODIFIER_SHIFT,        XKB_KEY_Print, spawn, SHCMD("f=\"$HOME/Pictures/Screenshots/$(date +%Y%m%d%H%M%S).png\"; g=$(slurp) && [ -n \"$g\" ] && grim -g \"$g\" \"$f\" && wl-copy < \"$f\" && notify-send -i \"$f\" \"Screenshot saved and copied to clipboard\"") },
-	{ WLR_MODIFIER_CTRL,         XKB_KEY_Print, spawn, SHCMD("~/.local/bin/toggle-recording") },
-	{ WLR_MODIFIER_CTRL|WLR_MODIFIER_SHIFT, XKB_KEY_Print, spawn, SHCMD("~/.local/bin/toggle-recording-area") },
+	{ 0,                         XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/fscreen.sh HDMI-A-1")},
+	{ WLR_MODIFIER_SHIFT,        XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/sscreen.sh")},
+	{ WLR_MODIFIER_CTRL,         XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/toggle-recording.sh") },
+	{ WLR_MODIFIER_CTRL|WLR_MODIFIER_SHIFT, XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/toggle-recording-area.sh") },
 
 	/* app binds */
 	{ MODKEY,                    XKB_KEY_s,           spawn,            SHCMD("foot tmux") },
 	{ MODKEY,                    XKB_KEY_v,           spawn,            SHCMD("foot nvim") },
 	{ MODKEY,                    XKB_KEY_e,           spawn,            SHCMD("foot yazi") },
-	{ MODKEY,                    XKB_KEY_b,           spawn,            SHCMD("flatpak run org.mozilla.firefox") },
+	{ MODKEY,                    XKB_KEY_b,           spawn,            SHCMD("firefox") },
 	{ MODKEY,                    XKB_KEY_t,           spawn,            SHCMD("foot") },
 
 	{ WLR_MODIFIER_CTRL|WLR_MODIFIER_ALT,XKB_KEY_Terminate_Server, quit, {0} },
