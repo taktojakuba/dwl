@@ -494,6 +494,7 @@ static struct wlr_xwayland *xwayland;
 
 /* configuration, allows nested code to access above variables */
 #include "config.h"
+#include "colors.h"
 
 /* attempt to encapsulate suck into one file */
 #include "client.h"

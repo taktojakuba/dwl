@@ -1,24 +1,14 @@
-#define COLOR(hex)    { ((hex >> 24) & 0xFF) / 255.0f, \
-                        ((hex >> 16) & 0xFF) / 255.0f, \
-                        ((hex >> 8) & 0xFF) / 255.0f, \
-                        (hex & 0xFF) / 255.0f }
 /* appearance */
 static const int sloppyfocus               = 1;  /* focus follows mouse */
 static const int bypass_surface_visibility = 0;
 static const unsigned int borderpx         = 1;  /* borderpx */
-/* colors */
-static float rootcolor[]                   = COLOR(0x0f0a0bff);
-static float bordercolor[]                 = COLOR(0x795457ff);
-static float focuscolor[]                  = COLOR(0xe0858dff);
-static float urgentcolor[]                 = COLOR(0xd96a76ff);
-static const float fullscreen_bg[]         = {0.0f, 0.0f, 0.0f, 1.0f};
 
 /* cursor theme/size  */
 static const char *cursor_theme            = "Future-dark-cursors";
 static const int cursor_size               = 24;
 
 /* window gaps */
-static const int gappx                     = 2;
+static const int gappx                     = 5;
 
 /* tags */
 #define TAGCOUNT (9)
