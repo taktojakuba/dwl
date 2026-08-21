@@ -58,7 +58,7 @@ static const struct xkb_rule_names xkb_rules = {
 };
 
 static const int repeat_rate = 35;
-static const int repeat_delay = 200;
+static const int repeat_delay = 250;
 
 /* Trackpad */
 static const int tap_to_click = 1;
