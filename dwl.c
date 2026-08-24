@@ -3173,8 +3173,27 @@ fair(Monitor *m)
 	if (n == 0)
 		return;
 
-	/* grid of roughly equal cells: rows*rows >= n, cols = ceil(n/rows) */
-	rows = (unsigned int)ceilf(sqrtf((float)n));
+	/* three windows: one full-height on the left, two stacked on the right */
+	if (n == 3) {
+		cw = (m->w.width - 3 * gappx) / 2;
+		ch = (m->w.height - 3 * gappx) / 2;
+		wl_list_for_each(c, &clients, link) {
+			if (!VISIBLEON(c, m) || c->isfloating || c->isfullscreen)
+				continue;
+			if (i == 0)
+				resize(c, (struct wlr_box){.x = m->w.x + gappx, .y = m->w.y + gappx,
+					.width = cw, .height = m->w.height - 2 * gappx}, 0);
+			else
+				resize(c, (struct wlr_box){.x = m->w.x + cw + 2 * gappx,
+					.y = m->w.y + gappx + (ch + gappx) * (i - 1),
+					.width = m->w.width - cw - 3 * gappx, .height = ch}, 0);
+			i++;
+		}
+		return;
+	}
+
+	/* grid of roughly equal cells, at least as many columns as rows */
+	rows = (unsigned int)sqrtf((float)n);
 	cols = (n + rows - 1) / rows;
 	cw = (m->w.width - (cols + 1) * gappx) / cols;
 	ch = (m->w.height - (rows + 1) * gappx) / rows;
@@ -3182,8 +3201,8 @@ fair(Monitor *m)
 	wl_list_for_each(c, &clients, link) {
 		if (!VISIBLEON(c, m) || c->isfloating || c->isfullscreen)
 			continue;
-		resize(c, (struct wlr_box){.x = m->w.x + gappx + (cw + gappx) * (i % cols),
-			.y = m->w.y + gappx + (ch + gappx) * (i / cols), .width = cw, .height = ch}, 0);
+		resize(c, (struct wlr_box){.x = m->w.x + gappx + (cw + gappx) * (i / rows),
+			.y = m->w.y + gappx + (ch + gappx) * (i % rows), .width = cw, .height = ch}, 0);
 		i++;
 	}
 }

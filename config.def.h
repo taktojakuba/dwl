@@ -4,11 +4,11 @@ static const int bypass_surface_visibility = 0;
 static const unsigned int borderpx         = 1;  /* borderpx */
 
 /* cursor theme/size  */
-static const char *cursor_theme            = "Shiori-Novella";
+static const char *cursor_theme            = "Future-dark-cursors";
 static const int cursor_size               = 24;
 
 /* window gaps */
-static const int gappx                     = 5;
+static const int gappx                     = 15;
 
 /* tags */
 #define TAGCOUNT (9)
@@ -42,7 +42,7 @@ static const Layout layouts[] = {
   { "[M]",      monocle },
 };
 
-static const int layout = 1; 
+static const int layout = 0; 
 
 /* monitors */
 static const MonitorRule monrules[] = {
