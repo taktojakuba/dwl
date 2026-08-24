@@ -4,7 +4,7 @@ static const int bypass_surface_visibility = 0;
 static const unsigned int borderpx         = 1;  /* borderpx */
 
 /* cursor theme/size  */
-static const char *cursor_theme            = "Future-dark-cursors";
+static const char *cursor_theme            = "Shiori-Novella";
 static const int cursor_size               = 24;
 
 /* window gaps */
