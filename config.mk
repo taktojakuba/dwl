@@ -24,8 +24,6 @@ WLR_LIBS = `$(PKG_CONFIG) --libs wlroots-0.20`
 #	-I$(PWD)/wlroots/0.20/include/wlroots-0.20
 #WLR_LIBS = -Wl,-rpath,$(PWD)/wlroots/0.20/lib64 -L$(PWD)/wlroots/0.20/lib64 -lwlroots-0.20
 
-XWAYLAND =
-XLIBS =
 # Uncomment to build XWayland support
 XWAYLAND = -DXWAYLAND
 XLIBS = xcb xcb-icccm
@@ -36,4 +34,6 @@ XLIBS = xcb xcb-icccm
 CC = cc
 
 # optimization level (default from make is -O1)
-CFLAGS = -Os -march=native -flto
+CFLAGS = -O3 -march=native -flto -fomit-frame-pointer -funroll-loops \
+-fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections 
+LDFLAGS = -flto -Wl,--gc-sections

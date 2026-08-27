@@ -11,7 +11,7 @@ static const int cursor_size               = 24;
 static const int gappx                     = 15;
 
 /* tags */
-#define TAGCOUNT (9)
+#define TAGCOUNT (5)
 
 /* logging */
 static int log_level = WLR_ERROR;
