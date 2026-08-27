@@ -132,23 +132,20 @@ static const Key keys[] = {
 	/* kill window */
 	{ MODKEY,                    XKB_KEY_q,           killclient,       {0} },
 
-	/* noctalia shell binds */
-	{ MODKEY,                    XKB_KEY_a,           spawn,            SHCMD("noctalia msg panel-toggle launcher") },
-	{ MODKEY,                    XKB_KEY_y,           spawn,            SHCMD("noctalia msg panel-toggle wallpaper") },
-	{ MODKEY,                    XKB_KEY_Escape,      spawn,            SHCMD("noctalia msg panel-toggle session") },
+	/* launcher, wallpaper & power */
+	{ MODKEY,                    XKB_KEY_a,           spawn,            SHCMD("rofi -show drun") },
+	{ MODKEY,                    XKB_KEY_y,           spawn,            SHCMD("$HOME/dwl/wallpaper.sh") },
+	{ MODKEY,                    XKB_KEY_Escape,      spawn,            SHCMD("$HOME/dwl/power.sh") },
 	/* audio */
-	{ 0,                         XKB_KEY_XF86AudioRaiseVolume, spawn,   SHCMD("noctalia msg volume-up") },
-	{ 0,                         XKB_KEY_XF86AudioLowerVolume, spawn,   SHCMD("noctalia msg volume-down") },
-	{ 0,                         XKB_KEY_XF86AudioMute, spawn,           SHCMD("noctalia msg volume-mute") },
+	{ 0,                         XKB_KEY_XF86AudioRaiseVolume, spawn,   SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+") },
+	{ 0,                         XKB_KEY_XF86AudioLowerVolume, spawn,   SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-") },
+	{ 0,                         XKB_KEY_XF86AudioMute, spawn,           SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") },
 	/* media */
-	{ 0,                         XKB_KEY_XF86AudioPlay, spawn,           SHCMD("noctalia msg media toggle") },
-	{ 0,                         XKB_KEY_XF86AudioNext, spawn,           SHCMD("noctalia msg media next") },
-	{ 0,                         XKB_KEY_XF86AudioPrev, spawn,           SHCMD("noctalia msg media previous") },
-	/* brightness */
-	{ 0,                         XKB_KEY_XF86MonBrightnessUp, spawn,     SHCMD("noctalia msg brightness-up") },
-	{ 0,                         XKB_KEY_XF86MonBrightnessDown, spawn,   SHCMD("noctalia msg brightness-down") },
-	/* power */
-	{ 0,                         XKB_KEY_XF86Search, spawn,              SHCMD("noctalia msg power-cycle") },
+	{ 0,                         XKB_KEY_XF86AudioPlay, spawn,           SHCMD("playerctl play-pause") },
+	{ 0,                         XKB_KEY_XF86AudioNext, spawn,           SHCMD("playerctl next") },
+	{ 0,                         XKB_KEY_XF86AudioPrev, spawn,           SHCMD("playerctl previous") },
+	/* power menu */
+	{ 0,                         XKB_KEY_XF86Search, spawn,              SHCMD("$HOME/dwl/power.sh") },
 
 	/* screenshots */
 	{ 0,                         XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/fscreen.sh HDMI-A-1")},
