@@ -11,16 +11,13 @@ kill -INT "$(cat "$PIDFILE")"
 rm -f "$PIDFILE"
 notify-send "Screen recording" "Recording stopped"
 else
-OUTPUT="${OUTDIR}/recording-$(date +%Y-%m-%d_%H-%M-%S).mp4"
+	OUTPUT="${OUTDIR}/recording-$(date +%Y-%m-%d_%H-%M-%S).mp4"
 
-```
-wf-recorder \
-    --audio="$AUDIO_SOURCE" \
-    --file="$OUTPUT" \
-    >/tmp/wf-recorder.log 2>&1 &
+	wf-recorder \
+		--audio="$AUDIO_SOURCE" \
+		--file="$OUTPUT" \
+		>/tmp/wf-recorder.log 2>&1 &
 
-echo $! > "$PIDFILE"
-notify-send "Screen recording" "Recording started"
-```
-
+	echo $! > "$PIDFILE"
+	notify-send "Screen recording" "Recording started"
 fi

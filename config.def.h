@@ -134,24 +134,24 @@ static const Key keys[] = {
 
 	/* launcher, wallpaper & power */
 	{ MODKEY,                    XKB_KEY_a,           spawn,            SHCMD("rofi -show drun") },
-	{ MODKEY,                    XKB_KEY_y,           spawn,            SHCMD("$HOME/dwl/wallpaper.sh") },
-	{ MODKEY,                    XKB_KEY_Escape,      spawn,            SHCMD("$HOME/dwl/power.sh") },
+	{ MODKEY,                    XKB_KEY_y,           spawn,            SHCMD("$HOME/dwl/scripts/wallpaper.sh") },
+	{ MODKEY,                    XKB_KEY_Escape,      spawn,            SHCMD("$HOME/dwl/scripts/power.sh") },
 	/* audio */
-	{ 0,                         XKB_KEY_XF86AudioRaiseVolume, spawn,   SHCMD("$HOME/dwl/volup.sh") },
-	{ 0,                         XKB_KEY_XF86AudioLowerVolume, spawn,   SHCMD("$HOME/dwl/voldown.sh") },
-	{ 0,                         XKB_KEY_XF86AudioMute, spawn,           SHCMD("$HOME/dwl/volmute.sh.sh") },
+	{ 0,                         XKB_KEY_XF86AudioRaiseVolume, spawn,   SHCMD("$HOME/dwl/scripts/volup.sh") },
+	{ 0,                         XKB_KEY_XF86AudioLowerVolume, spawn,   SHCMD("$HOME/dwl/scripts/voldown.sh") },
+	{ 0,                         XKB_KEY_XF86AudioMute, spawn,           SHCMD("$HOME/dwl/scripts/volmute.sh") },
 	/* media */
 	{ 0,                         XKB_KEY_XF86AudioPlay, spawn,           SHCMD("playerctl play-pause") },
 	{ 0,                         XKB_KEY_XF86AudioNext, spawn,           SHCMD("playerctl next") },
 	{ 0,                         XKB_KEY_XF86AudioPrev, spawn,           SHCMD("playerctl previous") },
 	/* power menu */
-	{ 0,                         XKB_KEY_XF86Search, spawn,              SHCMD("$HOME/dwl/powerprofile.sh") },
+	{ 0,                         XKB_KEY_XF86Search, spawn,              SHCMD("$HOME/dwl/scripts/powerprofile.sh") },
 
 	/* screenshots */
-	{ 0,                         XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/fscreen.sh HDMI-A-1")},
-	{ WLR_MODIFIER_SHIFT,        XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/sscreen.sh")},
-	{ WLR_MODIFIER_CTRL,         XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/toggle-recording.sh") },
-	{ WLR_MODIFIER_CTRL|WLR_MODIFIER_SHIFT, XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/toggle-recording-area.sh") },
+	{ 0,                         XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/scripts/fscreen.sh HDMI-A-1")},
+	{ WLR_MODIFIER_SHIFT,        XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/scripts/sscreen.sh")},
+	{ WLR_MODIFIER_CTRL,         XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/scripts/toggle-recording.sh") },
+	{ WLR_MODIFIER_CTRL|WLR_MODIFIER_SHIFT, XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/scripts/toggle-recording-area.sh") },
 
 	/* app binds */
 	{ MODKEY,                    XKB_KEY_s,           spawn,            SHCMD("foot tmux") },
