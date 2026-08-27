@@ -137,15 +137,15 @@ static const Key keys[] = {
 	{ MODKEY,                    XKB_KEY_y,           spawn,            SHCMD("$HOME/dwl/wallpaper.sh") },
 	{ MODKEY,                    XKB_KEY_Escape,      spawn,            SHCMD("$HOME/dwl/power.sh") },
 	/* audio */
-	{ 0,                         XKB_KEY_XF86AudioRaiseVolume, spawn,   SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+") },
-	{ 0,                         XKB_KEY_XF86AudioLowerVolume, spawn,   SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-") },
-	{ 0,                         XKB_KEY_XF86AudioMute, spawn,           SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") },
+	{ 0,                         XKB_KEY_XF86AudioRaiseVolume, spawn,   SHCMD("$HOME/dwl/volup.sh") },
+	{ 0,                         XKB_KEY_XF86AudioLowerVolume, spawn,   SHCMD("$HOME/dwl/voldown.sh") },
+	{ 0,                         XKB_KEY_XF86AudioMute, spawn,           SHCMD("$HOME/dwl/volmute.sh.sh") },
 	/* media */
 	{ 0,                         XKB_KEY_XF86AudioPlay, spawn,           SHCMD("playerctl play-pause") },
 	{ 0,                         XKB_KEY_XF86AudioNext, spawn,           SHCMD("playerctl next") },
 	{ 0,                         XKB_KEY_XF86AudioPrev, spawn,           SHCMD("playerctl previous") },
 	/* power menu */
-	{ 0,                         XKB_KEY_XF86Search, spawn,              SHCMD("$HOME/dwl/power.sh") },
+	{ 0,                         XKB_KEY_XF86Search, spawn,              SHCMD("$HOME/dwl/powerprofile.sh") },
 
 	/* screenshots */
 	{ 0,                         XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/fscreen.sh HDMI-A-1")},
