@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 choice=$(printf "Shutdown\nReboot\nLogout\nSuspend" | rofi -dmenu -p "Power")
 [ -z "$choice" ] && exit 1

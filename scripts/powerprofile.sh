@@ -1,14 +1,10 @@
 #!/bin/bash
 
-profiles=("power-saver" "balanced" "performance")
+choice=$(printf "power-saver\nbalanced\nperformance" | rofi -dmenu -p "Power-profile")
+[ -z "$choice" ] && exit 1
 
-current=$(powerprofilesctl get)
-
-for i in "${!profiles[@]}"; do
-    if [[ "${profiles[$i]}" == "$current" ]]; then
-        next=$(( (i + 1) % ${#profiles[@]} ))
-        powerprofilesctl set "${profiles[$next]}"
-        notify-send "Power-profile" "${profiles[$next]}"
-        exit
-    fi
-done
+case "$choice" in
+	power-saver) powerprofilesctl set power-saver ;;
+	balanced)   powerprofilesctl set balanced ;;
+	performance)   powerprofilesctl set performance ;;
+esac
