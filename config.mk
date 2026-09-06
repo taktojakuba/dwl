@@ -34,6 +34,4 @@ XLIBS = xcb xcb-icccm
 CC = cc
 
 # optimization level (default from make is -O1)
-CFLAGS = -O3 -march=native -flto -fomit-frame-pointer -funroll-loops \
--fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections 
-LDFLAGS = -flto -Wl,--gc-sections
+CFLAGS = -Os -march=native -flto
