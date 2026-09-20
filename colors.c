@@ -9,8 +9,8 @@
                         (hex & 0xFF) / 255.0f }
 
 /* colors */
-float rootcolor[]                   = COLOR(0x212529ff);
-float bordercolor[]                 = COLOR(0x495057ff);
-float focuscolor[]                  = COLOR(0xadb5bdff);
-float urgentcolor[]                 = COLOR(0xf7768eff);
+float rootcolor[]                   = COLOR(0x141314ff);
+float bordercolor[]                 = COLOR(0x4a454aff);
+float focuscolor[]                  = COLOR(0xcfc3cdff);
+float urgentcolor[]                 = COLOR(0xffb4abff);
 const float fullscreen_bg[]         = {0.0f, 0.0f, 0.0f, 1.0f};
