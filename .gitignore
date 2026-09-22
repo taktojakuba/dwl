@@ -5,3 +5,5 @@ dwl
 .ccls-cache
 config.h
 .direnv/
+result
+result-*
