@@ -8,4 +8,4 @@ wallpaper=$(find "$dir" -maxdepth 1 -type f \( -name '*.jpg' -o -name '*.jpeg' -
 
 pkill wbg 2>/dev/null
 wbg -s "$dir/$wallpaper" 2>/dev/null &
-matugen --prefer=value image "$dir/$wallpaper" -t scheme-content &
+matugen --prefer=value image "$dir/$wallpaper" -t scheme-fidelity &
