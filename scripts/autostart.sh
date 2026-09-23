@@ -1,8 +1,8 @@
 #!/bin/bash
 
 set +e
-
-ironbar >/dev/null 2>&1 &
+justbar &>/dev/null &
+#ironbar >/dev/null 2>&1 &
 mako >/dev/null 2>&1 &
 wbg ~/Pictures/Wallpapers/fav.jpg >/dev/null 2>&1 &
 
