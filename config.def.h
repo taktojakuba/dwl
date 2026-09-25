@@ -154,11 +154,11 @@ static const Key keys[] = {
 	{ WLR_MODIFIER_CTRL|WLR_MODIFIER_SHIFT, XKB_KEY_Print, spawn, SHCMD("$HOME/dwl/scripts/toggle-recording-area.sh") },
 
 	/* app binds */
-	{ MODKEY,                    XKB_KEY_s,           spawn,            SHCMD("foot tmux") },
-	{ MODKEY,                    XKB_KEY_v,           spawn,            SHCMD("foot nvim") },
-	{ MODKEY,                    XKB_KEY_e,           spawn,            SHCMD("foot yazi") },
+	{ MODKEY,                    XKB_KEY_s,           spawn,            SHCMD("footclient tmux") },
+	{ MODKEY,                    XKB_KEY_v,           spawn,            SHCMD("footclient nvim") },
+	{ MODKEY,                    XKB_KEY_e,           spawn,            SHCMD("footclient yazi") },
 	{ MODKEY,                    XKB_KEY_b,           spawn,            SHCMD("firefox") },
-	{ MODKEY,                    XKB_KEY_t,           spawn,            SHCMD("foot") },
+	{ MODKEY,                    XKB_KEY_t,           spawn,            SHCMD("footclient") },
 
 	{ WLR_MODIFIER_CTRL|WLR_MODIFIER_ALT,XKB_KEY_Terminate_Server, quit, {0} },
 #define CHVT(n) { WLR_MODIFIER_CTRL|WLR_MODIFIER_ALT,XKB_KEY_XF86Switch_VT_##n, chvt, {.ui = (n)} }
