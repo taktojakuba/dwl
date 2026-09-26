@@ -14,6 +14,7 @@ else
 	OUTPUT="${OUTDIR}/recording-$(date +%Y-%m-%d_%H-%M-%S).mp4"
 
 	wf-recorder \
+    --output="HDMI-A-1" \
 		--audio="$AUDIO_SOURCE" \
 		--file="$OUTPUT" \
 		>/tmp/wf-recorder.log 2>&1 &

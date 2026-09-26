@@ -4,5 +4,5 @@ export XCURSOR_SIZE=24
 export XDG_CURRENT_DESKTOP=dwl:wlroots
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
 export WLR_RENDERER=gles2
-# gles2 vulkan
+# gles2 vulkan pixman
 exec jr /home/kuba/dwl/dwl -s /home/kuba/dwl/scripts/autostart.sh
