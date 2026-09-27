@@ -1,5 +1,5 @@
 #!/bin/bash
-export XCURSOR_THEME=Future-dark-cursors
+export XCURSOR_THEME=Bibata-Modern-Classic
 export XCURSOR_SIZE=24
 export XDG_CURRENT_DESKTOP=dwl:wlroots
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
